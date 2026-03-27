@@ -1,0 +1,35 @@
+{
+  "name": "english-tutor-mcp",
+  "version": "1.0.0",
+  "description": "Remote MCP server providing curated word and phrase recommendations to an English tutor AI agent",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:test": "tsx scripts/db-test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "^1.19.11",
+    "drizzle-orm": "^0.45.1",
+    "hono": "^4.12.9",
+    "pg": "^8.20.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/pg": "^8.20.0",
+    "dotenv": "^17.3.1",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
