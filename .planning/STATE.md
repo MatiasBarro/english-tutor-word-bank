@@ -21,7 +21,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-26)
 
 **Core value:** The agent always gets the right word for the right context — only active, categorized words with frequency guidance, so responses feel natural and pedagogically intentional.
-**Current focus:** Phase 01 — foundation
+**Current focus:** Phase 02 — mcp-layer
 
 ## Current Position
 
@@ -36,23 +36,22 @@ Progress: [███░░░░░░░] 27%
 
 **Velocity:**
 
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Total plans completed: 3
+- Average duration: ~9 min/plan
+- Total execution time: ~27 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 3 | ~27 min | ~9 min |
 
 **Recent Trend:**
 
-- Last 5 plans: -
-- Trend: -
+- Last 3 plans: 01-01 (~10 min), 01-02 (~15 min), 01-03 (~2 min)
+- Trend: Fast
 
-*Updated after each plan completion*
-| Phase 01-foundation P01 | 2 | 1 tasks | 6 files |
+*Updated after Phase 1 completion*
 
 ## Accumulated Context
 
@@ -61,15 +60,13 @@ Progress: [███░░░░░░░] 27%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Use `pg` (node-postgres) driver, not postgres.js — safer for connection pooler compatibility
-- Use `varchar` for `register` field — avoids PostgreSQL enum migration complexity for a two-value field
-- Use UUID (not serial) as primary key — matches `id: string` wire format expected by MCP clients
-- Use `drizzle-kit generate` + `drizzle-kit migrate` — never `drizzle-kit push` against any persistent DB
-- Pin `zod` to `^3.25.x` — Zod v4 silently breaks MCP tool schemas (SDK incompatibility)
-- Use `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode — SSE transport is deprecated (March 2025)
-- [Phase 01-foundation]: Zod pinned to ^3.25.x — zod v4 breaks MCP tool schemas (SDK incompatibility)
-- [Phase 01-foundation]: type: module in package.json — ESM-native project aligns with Hono and MCP SDK expectations
-- [Phase 01-foundation]: NodeNext module resolution — matches Node 24 native ESM behavior
+- `pg` driver (not postgres.js) — safer for connection pooler compatibility
+- `varchar` for `register` field — avoids PostgreSQL enum migration complexity
+- UUID primary key — matches `id: string` wire format expected by MCP clients
+- `drizzle-kit generate` + `drizzle-kit migrate` only — never `drizzle-kit push`
+- Zod pinned to `^3.25.x` — v4 silently breaks MCP tool schemas
+- `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode — SSE deprecated March 2025
+- `type: module` + NodeNext resolution — ESM-native, matches Node 24 behavior
 
 ### Pending Todos
 

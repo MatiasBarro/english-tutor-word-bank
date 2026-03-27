@@ -14,7 +14,7 @@ Three phases deliver a remote MCP server that gives an English tutor AI agent cu
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Running TypeScript/Hono server with validated schema and migration workflow
+- [x] **Phase 1: Foundation** - Running TypeScript/Hono server with validated schema and migration workflow
 - [ ] **Phase 2: MCP Layer** - Working MCP server an agent can connect to and call both tools against real data
 - [ ] **Phase 3: REST API** - Full admin interface with CRUD, bulk import, and secure Bearer token auth
 

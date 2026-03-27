@@ -10,7 +10,7 @@
 - [x] **DB-01**: Word record has fields: `id` (UUID), `word`, `category`, `register` (`"formal" | "informal"` enum), `frequency` (integer 1–100), `usage_sentence` (optional), `active` (boolean), `created_at`
 - [x] **DB-02**: Database schema is managed via committed Drizzle migration files (`drizzle-kit generate` + `drizzle-kit migrate`) — never `drizzle-kit push`
 - [x] **DB-03**: Database connection is a singleton pg Pool shared by both MCP tools and REST handlers
-- [ ] **DB-04**: All environment variables (`PORT`, `DATABASE_URL`, `API_KEY`) are validated at startup via Zod; server fails fast if any are missing
+- [x] **DB-04**: All environment variables (`PORT`, `DATABASE_URL`, `API_KEY`) are validated at startup via Zod; server fails fast if any are missing
 
 ### MCP Tools
 
@@ -73,7 +73,7 @@
 | DB-01 | Phase 1 | Complete |
 | DB-02 | Phase 1 | Complete |
 | DB-03 | Phase 1 | Complete |
-| DB-04 | Phase 1 | Pending |
+| DB-04 | Phase 1 | Complete |
 | MCP-01 | Phase 2 | Pending |
 | MCP-02 | Phase 2 | Pending |
 | MCP-03 | Phase 2 | Pending |
@@ -97,4 +97,4 @@
 
 ---
 *Requirements defined: 2026-03-26*
-*Last updated: 2026-03-26 after initial definition*
+*Last updated: 2026-03-27 after Phase 1 completion*
