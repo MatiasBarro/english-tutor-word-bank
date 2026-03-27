@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01: Project scaffold — TypeScript, Hono, Node.js 24, all dependencies pinned, `tsconfig.json` with `skipLibCheck: true`
-- [ ] 01-02: Database schema and migrations — Drizzle schema for `words` table, `drizzle-kit generate` + `migrate` workflow, singleton pg Pool with `max`, `idleTimeoutMillis`, `connectionTimeoutMillis`
-- [ ] 01-03: Environment config and server startup — Zod-validated `src/config.ts`, Hono server wired with `@hono/node-server`, health check route, `npm run dev` with `tsx`
+- [x] 01-02: Database schema and migrations — Drizzle schema for `words` table, `drizzle-kit generate` + `migrate` workflow, singleton pg Pool with `max`, `idleTimeoutMillis`, `connectionTimeoutMillis`
+- [x] 01-03: Environment config and server startup — Zod-validated `src/config.ts`, Hono server wired with `@hono/node-server`, health check route, `npm run dev` with `tsx`
 
 ### Phase 2: MCP Layer
 **Goal**: A working MCP server at `/mcp` using Streamable HTTP transport that an agent can connect to and call `list_categories` and `get_words_by_category` against real database rows
@@ -86,7 +86,7 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete | 2026-03-27 |
 | 2. MCP Layer | 0/4 | Not started | - |
 | 3. REST API | 0/4 | Not started | - |
 
