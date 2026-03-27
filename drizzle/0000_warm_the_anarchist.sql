@@ -7,5 +7,6 @@ CREATE TABLE "words" (
 	"frequency" integer NOT NULL,
 	"usage_sentence" text,
 	"active" boolean DEFAULT true NOT NULL,
-	"created_at" timestamp with time zone DEFAULT now() NOT NULL
+	"created_at" timestamp with time zone DEFAULT now() NOT NULL,
+	"updated_at" timestamp with time zone DEFAULT now() NOT NULL
 );

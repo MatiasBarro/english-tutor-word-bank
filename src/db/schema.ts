@@ -20,4 +20,5 @@ export const words = pgTable("words", {
   usageSentence: text("usage_sentence"),
   active: boolean("active").notNull().default(true),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
