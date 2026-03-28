@@ -12,13 +12,16 @@
     "start": "node dist/server.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:test": "tsx scripts/db-test.ts"
+    "db:test": "tsx scripts/db-test.ts",
+    "mcp:test": "tsx scripts/mcp-test.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hono/mcp": "^0.2.3",
     "@hono/node-server": "^1.19.11",
+    "@modelcontextprotocol/sdk": "^1.28.0",
     "drizzle-orm": "^0.45.1",
     "hono": "^4.12.9",
     "pg": "^8.20.0",
