@@ -60,7 +60,7 @@ completed: 2026-03-28
 - **Duration:** ~3 min
 - **Started:** 2026-03-28T20:50:00Z
 - **Completed:** 2026-03-28T20:53:00Z
-- **Tasks:** 1 completed, 1 pending human verification (Task 2 checkpoint)
+- **Tasks:** 2 completed (Task 1: script creation, Task 2: human verification passed)
 - **Files modified:** 1
 
 ## Accomplishments
@@ -79,7 +79,7 @@ Each task was committed atomically:
 
 1. **Task 1: Create E2E MCP smoke test script** - `fc90319` (feat)
 
-**Note:** Task 2 is a human verification checkpoint — awaiting operator to run `npm run mcp:test` against a running server.
+2. **Task 2: Verify full MCP stack works end-to-end** - human-verify checkpoint (approved by operator)
 
 ## Files Created/Modified
 
@@ -113,9 +113,9 @@ To run the smoke test, the operator must:
 
 ## Next Phase Readiness
 
-- E2E smoke test is ready for execution once the server is running
-- Phase 02 is complete pending human verification of the smoke test
-- Phase 03 (REST API) can proceed once smoke test passes
+- E2E smoke test passed: `npm run mcp:test` exited 0, "ALL TESTS PASSED" confirmed by operator
+- Phase 02 is fully complete — both MCP tools verified end-to-end with real database data
+- Phase 03 (REST API) can proceed: auth middleware, CRUD endpoints, bulk import, categories listing
 
 ---
 *Phase: 02-mcp-layer*

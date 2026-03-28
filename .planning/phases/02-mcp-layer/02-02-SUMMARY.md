@@ -108,6 +108,12 @@ None - no external service configuration required.
 - Ready for Plan 02-03: `get_words_by_category` tool implementation
 - The side-effect import pattern and dual response format are established for 02-03 to follow
 
+## Self-Check: PASSED
+
+- FOUND: `src/tools/list-categories.ts`
+- FOUND: `.planning/phases/02-mcp-layer/02-02-SUMMARY.md`
+- FOUND: commit `2c6ce35`
+
 ---
 *Phase: 02-mcp-layer*
 *Completed: 2026-03-28*

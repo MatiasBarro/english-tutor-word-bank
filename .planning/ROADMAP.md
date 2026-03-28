@@ -15,7 +15,7 @@ Three phases deliver a remote MCP server that gives an English tutor AI agent cu
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Running TypeScript/Hono server with validated schema and migration workflow
-- [ ] **Phase 2: MCP Layer** - Working MCP server an agent can connect to and call both tools against real data
+- [x] **Phase 2: MCP Layer** - Working MCP server an agent can connect to and call both tools against real data (completed 2026-03-28)
 - [ ] **Phase 3: REST API** - Full admin interface with CRUD, bulk import, and secure Bearer token auth
 
 ## Phase Details
@@ -54,8 +54,8 @@ Plans:
 Plans:
 - [x] 02-01: MCP server wiring — `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode (`sessionIdGenerator: undefined`), mounted at `/mcp` in `src/server.ts`
 - [x] 02-02: `list_categories` tool — Drizzle query with `WHERE active = true`, `SELECT DISTINCT category`, dual `content` + `structuredContent` response
-- [ ] 02-03: `get_words_by_category` tool — Drizzle query with `WHERE active = true AND category = ?`, full record return, dual response format, input schema via Zod v3
-- [ ] 02-04: Tool error handling and agent smoke test — try/catch wrappers on both tools, `isError: true` return path, end-to-end test with a real MCP client call
+- [x] 02-03: `get_words_by_category` tool — Drizzle query with `WHERE active = true AND category = ?`, full record return, dual response format, input schema via Zod v3
+- [x] 02-04: Tool error handling and agent smoke test — try/catch wrappers on both tools, `isError: true` return path, end-to-end test with a real MCP client call
 **UI hint**: no
 
 ### Phase 3: REST API
@@ -87,7 +87,7 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-27 |
-| 2. MCP Layer | 0/4 | Not started | - |
+| 2. MCP Layer | 4/4 | Complete   | 2026-03-28 |
 | 3. REST API | 0/4 | Not started | - |
 
 ---

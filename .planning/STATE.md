@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: "## Phases"
 status: verifying
-stopped_at: "Checkpoint: Task 2 of 02-04 — awaiting human verification of MCP smoke test"
-last_updated: "2026-03-28T20:51:53.195Z"
+stopped_at: Completed 02-mcp-layer 02-04-PLAN.md — Phase 02 complete
+last_updated: "2026-03-28T21:20:51.369Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 3
-  completed_phases: 1
-  total_plans: 3
-  completed_plans: 4
-  percent: 27
+  completed_phases: 2
+  total_plans: 7
+  completed_plans: 7
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-26)
 
 **Core value:** The agent always gets the right word for the right context — only active, categorized words with frequency guidance, so responses feel natural and pedagogically intentional.
-**Current focus:** Phase 02 — mcp-layer
+**Current focus:** Phase 03 — rest-api
 
 ## Current Position
 
-Phase: 01 (foundation) — COMPLETE → Next: 02 (mcp-layer)
-Plan: 3 of 3 done
-Status: Phase complete — ready for verification
+Phase: 02 (mcp-layer) — COMPLETE → Next: 03 (rest-api)
+Plan: 4 of 4 done
+Status: Phase complete — smoke test verified by operator
 Last activity: 2026-03-28
 
-Progress: [███░░░░░░░] 27%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Progress: [███░░░░░░░] 27%
 
 *Updated after Phase 1 completion*
 | Phase 02-mcp-layer P04 | 1min | 1 tasks | 1 files |
+| Phase 02-mcp-layer P04 | 5min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,7 @@ Recent decisions affecting current work:
 - `type: module` + NodeNext resolution — ESM-native, matches Node 24 behavior
 - [Phase 02-mcp-layer]: Test category '__mcp_smoke_test__' isolates seed data from real word bank
 - [Phase 02-mcp-layer]: cleanup() in finally block ensures test rows removed even on failure
+- [Phase 02-mcp-layer]: E2E smoke test passed: both MCP tools verified end-to-end with real DB data, inactive word filtering confirmed
 
 ### Pending Todos
 
@@ -77,11 +79,10 @@ None yet.
 
 ### Blockers/Concerns
 
-- Verify whether `@hono/mcp` or `@modelcontextprotocol/hono` is the canonical package before Phase 2 implementation (research flagged naming ambiguity)
-- Confirm SDK version in use supports `structuredContent` dual response format before treating Phase 2 as complete
+None — Phase 02 blockers resolved: `@hono/mcp` v0.2.3 confirmed canonical, `structuredContent` dual response format confirmed working via smoke test.
 
 ## Session Continuity
 
-Last session: 2026-03-28T20:51:53.193Z
-Stopped at: Checkpoint: Task 2 of 02-04 — awaiting human verification of MCP smoke test
+Last session: 2026-03-28T21:20:51.367Z
+Stopped at: Completed 02-mcp-layer 02-04-PLAN.md — Phase 02 complete
 Resume file: None
