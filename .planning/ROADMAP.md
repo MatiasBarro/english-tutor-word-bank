@@ -52,8 +52,8 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: MCP server wiring — `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode (`sessionIdGenerator: undefined`), mounted at `/mcp` in `src/server.ts`
-- [ ] 02-02: `list_categories` tool — Drizzle query with `WHERE active = true`, `SELECT DISTINCT category`, dual `content` + `structuredContent` response
+- [x] 02-01: MCP server wiring — `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode (`sessionIdGenerator: undefined`), mounted at `/mcp` in `src/server.ts`
+- [x] 02-02: `list_categories` tool — Drizzle query with `WHERE active = true`, `SELECT DISTINCT category`, dual `content` + `structuredContent` response
 - [ ] 02-03: `get_words_by_category` tool — Drizzle query with `WHERE active = true AND category = ?`, full record return, dual response format, input schema via Zod v3
 - [ ] 02-04: Tool error handling and agent smoke test — try/catch wrappers on both tools, `isError: true` return path, end-to-end test with a real MCP client call
 **UI hint**: no

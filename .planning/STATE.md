@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: "## Phases"
 status: executing
-stopped_at: Session resumed — Phase 01 confirmed complete, advancing to Phase 02 MCP Layer
-last_updated: "2026-03-28T20:40:08.064Z"
-last_activity: 2026-03-28 -- Phase 02 execution started
+stopped_at: Completed 02-02-PLAN.md — list_categories tool implemented
+last_updated: "2026-03-28T20:47:08.329Z"
+last_activity: 2026-03-28
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 7
-  completed_plans: 3
+  completed_plans: 5
   percent: 27
 ---
 
@@ -26,9 +26,9 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 ## Current Position
 
 Phase: 02 (mcp-layer) — EXECUTING
-Plan: 1 of 4
-Status: Executing Phase 02
-Last activity: 2026-03-28 -- Phase 02 execution started
+Plan: 2 of 4
+Status: Ready to execute
+Last activity: 2026-03-28
 
 Progress: [███░░░░░░░] 27%
 
@@ -52,6 +52,7 @@ Progress: [███░░░░░░░] 27%
 - Trend: Fast
 
 *Updated after Phase 1 completion*
+| Phase 02-mcp-layer P02 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,8 @@ Recent decisions affecting current work:
 - Zod pinned to `^3.25.x` — v4 silently breaks MCP tool schemas
 - `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode — SSE deprecated March 2025
 - `type: module` + NodeNext resolution — ESM-native, matches Node 24 behavior
+- [Phase 02-mcp-layer]: No outputSchema on list_categories tool to avoid SDK isError validation conflict (Pitfall 1)
+- [Phase 02-mcp-layer]: MCP text content is human-readable prose; structuredContent carries machine-parseable data
 
 ### Pending Todos
 
@@ -79,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-28T20:05:04.109Z
-Stopped at: Session resumed — Phase 01 confirmed complete, advancing to Phase 02 MCP Layer
+Last session: 2026-03-28T20:47:08.327Z
+Stopped at: Completed 02-02-PLAN.md — list_categories tool implemented
 Resume file: None
