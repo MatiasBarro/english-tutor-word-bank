@@ -19,7 +19,7 @@
 - [ ] **MCP-03**: MCP tools only return words where `active = true`
 - [ ] **MCP-04**: MCP tools return both `content[{type:"text"}]` and `structuredContent` per MCP spec 2025-11-25
 - [ ] **MCP-05**: MCP tool errors are returned as `{ isError: true, content: [...] }` — exceptions are never bubbled to the protocol layer
-- [ ] **MCP-06**: MCP server uses Streamable HTTP transport (`@hono/mcp` `StreamableHTTPTransport`) — SSE transport is not used
+- [x] **MCP-06**: MCP server uses Streamable HTTP transport (`@hono/mcp` `StreamableHTTPTransport`) — SSE transport is not used
 
 ### REST API — Word Management
 
@@ -34,7 +34,7 @@
 - [ ] **AUTH-01**: All REST endpoints require `Authorization: Bearer <API_KEY>` header
 - [ ] **AUTH-02**: Unauthorized requests return JSON `{ error: "Unauthorized" }` with HTTP 401 (not plain text)
 - [ ] **AUTH-03**: API key comparison uses `crypto.timingSafeEqual` to prevent timing attacks
-- [ ] **AUTH-04**: MCP endpoint (`/mcp`) does not require authentication
+- [x] **AUTH-04**: MCP endpoint (`/mcp`) does not require authentication
 
 ## v2 Requirements
 
@@ -79,7 +79,7 @@
 | MCP-03 | Phase 2 | Pending |
 | MCP-04 | Phase 2 | Pending |
 | MCP-05 | Phase 2 | Pending |
-| MCP-06 | Phase 2 | Pending |
+| MCP-06 | Phase 2 | Complete |
 | REST-01 | Phase 3 | Pending |
 | REST-02 | Phase 3 | Pending |
 | REST-03 | Phase 3 | Pending |
@@ -88,7 +88,7 @@
 | AUTH-01 | Phase 3 | Pending |
 | AUTH-02 | Phase 3 | Pending |
 | AUTH-03 | Phase 3 | Pending |
-| AUTH-04 | Phase 2 | Pending |
+| AUTH-04 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 19 total
