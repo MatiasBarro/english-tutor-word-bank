@@ -12,19 +12,17 @@ The agent always gets the right word for the right context — only active, cate
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Word record model: `word/phrase`, `category`, `register` (formal/informal), `frequency` weight, `usage_sentence` (optional), `active` (boolean) — Validated in Phase 1: db-bootstrap
+- [x] MCP tool: `list_categories` — returns all categories that have at least one active word — Validated in Phase 2: mcp-layer
+- [x] MCP tool: `get_words_by_category` — returns all active words for a given category, including frequency weight and register — Validated in Phase 2: mcp-layer
+- [x] Only active words are returned by MCP tools — Validated in Phase 2: mcp-layer
 
 ### Active
-
-- [x] Word record model: `word/phrase`, `category`, `register` (formal/informal), `frequency` weight, `usage_sentence` (optional), `active` (boolean)
-- [ ] MCP tool: `list_categories` — returns all categories that have at least one active word
-- [ ] MCP tool: `get_words_by_category` — returns all active words for a given category, including frequency weight and register
 - [ ] REST endpoint: `POST /words` — create a single word (API key protected)
 - [ ] REST endpoint: `PUT /words/:id` — edit a word (API key protected)
 - [ ] REST endpoint: `DELETE /words/:id` — delete a word (API key protected)
 - [ ] REST endpoint: `POST /words/import` — bulk import multiple words (API key protected)
 - [ ] REST endpoint: `GET /categories` — list all categories (API key protected)
-- [ ] Only active words are returned by MCP tools
 - [ ] Frequency weight is returned to the agent as-is; agent decides how to use it
 - [ ] API key authentication for all REST endpoints
 
@@ -65,7 +63,8 @@ The agent always gets the right word for the right context — only active, cate
 | `varchar` for `register` field | Avoids PostgreSQL enum migration complexity for a two-value field | Implemented — Phase 1 |
 | UUID primary key | Matches `id: string` wire format expected by MCP clients | Implemented — Phase 1 |
 | Zod pinned to `^3.25.x` | Zod v4 silently breaks MCP tool schemas (SDK incompatibility) | Enforced in package.json — Phase 1 |
-| `@hono/mcp` `StreamableHTTPTransport`, stateless mode | SSE transport deprecated March 2025; stateless avoids session management overhead | Planned — Phase 2 |
+| `@hono/mcp` `StreamableHTTPTransport`, stateless mode | SSE transport deprecated March 2025; stateless avoids session management overhead | Implemented — Phase 2 |
+| DI pattern for tool registration | `register(server)` functions avoid singleton-connect issue; tools injectable and testable | Implemented — Phase 2 |
 | `type: module` + NodeNext resolution | ESM-native; aligns with Hono and MCP SDK, matches Node 24 behavior | Implemented — Phase 1 |
 
 ## Evolution
@@ -86,4 +85,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-27 after Phase 1 completion*
+*Last updated: 2026-03-28 after Phase 2 completion*
