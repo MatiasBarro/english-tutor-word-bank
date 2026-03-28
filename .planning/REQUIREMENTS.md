@@ -14,8 +14,8 @@
 
 ### MCP Tools
 
-- [x] **MCP-01**: `list_categories` tool returns all distinct categories that have at least one active word
-- [ ] **MCP-02**: `get_words_by_category` tool returns all active words for a given category, including `word`, `register`, `frequency`, and `usage_sentence`
+- [ ] **MCP-01**: `list_categories` tool returns all distinct categories that have at least one active word
+- [x] **MCP-02**: `get_words_by_category` tool returns all active words for a given category, including `word`, `register`, `frequency`, and `usage_sentence`
 - [x] **MCP-03**: MCP tools only return words where `active = true`
 - [x] **MCP-04**: MCP tools return both `content[{type:"text"}]` and `structuredContent` per MCP spec 2025-11-25
 - [ ] **MCP-05**: MCP tool errors are returned as `{ isError: true, content: [...] }` — exceptions are never bubbled to the protocol layer
@@ -74,8 +74,8 @@
 | DB-02 | Phase 1 | Complete |
 | DB-03 | Phase 1 | Complete |
 | DB-04 | Phase 1 | Complete |
-| MCP-01 | Phase 2 | Complete |
-| MCP-02 | Phase 2 | Pending |
+| MCP-01 | Phase 2 | Pending |
+| MCP-02 | Phase 2 | Complete |
 | MCP-03 | Phase 2 | Complete |
 | MCP-04 | Phase 2 | Complete |
 | MCP-05 | Phase 2 | Pending |

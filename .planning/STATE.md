@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: "## Phases"
-status: executing
-stopped_at: Completed 02-02-PLAN.md — list_categories tool implemented
-last_updated: "2026-03-28T20:47:08.329Z"
+status: verifying
+stopped_at: Completed 02-mcp-layer-03-PLAN.md — get_words_by_category tool implemented
+last_updated: "2026-03-28T20:48:27.939Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 3
   completed_phases: 1
-  total_plans: 7
+  total_plans: 3
   completed_plans: 5
   percent: 27
 ---
@@ -25,9 +25,9 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 
 ## Current Position
 
-Phase: 02 (mcp-layer) — EXECUTING
-Plan: 2 of 4
-Status: Ready to execute
+Phase: 01 (foundation) — COMPLETE → Next: 02 (mcp-layer)
+Plan: 3 of 3 done
+Status: Phase complete — ready for verification
 Last activity: 2026-03-28
 
 Progress: [███░░░░░░░] 27%
@@ -52,7 +52,8 @@ Progress: [███░░░░░░░] 27%
 - Trend: Fast
 
 *Updated after Phase 1 completion*
-| Phase 02-mcp-layer P02 | 1 | 1 tasks | 1 files |
+| Phase 02-mcp-layer P01 | 8 | 2 tasks | 6 files |
+| Phase 02-mcp-layer P03 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -68,8 +69,10 @@ Recent decisions affecting current work:
 - Zod pinned to `^3.25.x` — v4 silently breaks MCP tool schemas
 - `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode — SSE deprecated March 2025
 - `type: module` + NodeNext resolution — ESM-native, matches Node 24 behavior
-- [Phase 02-mcp-layer]: No outputSchema on list_categories tool to avoid SDK isError validation conflict (Pitfall 1)
-- [Phase 02-mcp-layer]: MCP text content is human-readable prose; structuredContent carries machine-parseable data
+- [Phase 02-mcp-layer]: StreamableHTTPTransport called with no arguments for stateless mode
+- [Phase 02-mcp-layer]: app.all('/mcp') used for MCP endpoint to handle all HTTP verbs
+- [Phase 02-mcp-layer]: No authentication middleware on /mcp route per AUTH-04
+- [Phase 02-mcp-layer]: get_words_by_category uses dual response (content text + structuredContent) with no outputSchema to avoid isError conflict
 
 ### Pending Todos
 
@@ -82,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-28T20:47:08.327Z
-Stopped at: Completed 02-02-PLAN.md — list_categories tool implemented
+Last session: 2026-03-28T20:48:27.937Z
+Stopped at: Completed 02-mcp-layer-03-PLAN.md — get_words_by_category tool implemented
 Resume file: None
