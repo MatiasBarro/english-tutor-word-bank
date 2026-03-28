@@ -13,11 +13,12 @@ registerListCategories(mcpServer);
 registerGetWordsByCategory(mcpServer);
 
 const transport = new StreamableHTTPTransport();
-const mcpReady = mcpServer.connect(transport);
 
 export function createMcpHandler() {
   return async (c: Context) => {
-    await mcpReady;
+    if (!mcpServer.isConnected()) {
+      await mcpServer.connect(transport);
+    }
     return transport.handleRequest(c);
   };
 }
