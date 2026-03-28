@@ -4,10 +4,6 @@ import { config } from "./config.js";
 import { pool } from "./db/index.js";
 import { createMcpHandler } from "./mcp.js";
 
-// Side-effect imports to register tools on mcpServer
-import "./tools/list-categories.js";
-import "./tools/get-words-by-category.js";
-
 const app = new Hono();
 
 app.get("/health", (c) => {
