@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: "## Phases"
-status: executing
-stopped_at: Phase 01-foundation complete — all 3 plans done; ready for Phase 02 MCP Layer
-last_updated: "2026-03-27T15:10:00.000Z"
-last_activity: 2026-03-27
+status: verifying
+stopped_at: "Checkpoint: Task 2 of 02-04 — awaiting human verification of MCP smoke test"
+last_updated: "2026-03-28T20:51:53.195Z"
+last_activity: 2026-03-28
 progress:
   total_phases: 3
   completed_phases: 1
-  total_plans: 11
-  completed_plans: 3
+  total_plans: 3
+  completed_plans: 4
   percent: 27
 ---
 
@@ -27,8 +27,8 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 
 Phase: 01 (foundation) — COMPLETE → Next: 02 (mcp-layer)
 Plan: 3 of 3 done
-Status: Phase 01 complete — ready to plan Phase 02
-Last activity: 2026-03-27
+Status: Phase complete — ready for verification
+Last activity: 2026-03-28
 
 Progress: [███░░░░░░░] 27%
 
@@ -52,6 +52,7 @@ Progress: [███░░░░░░░] 27%
 - Trend: Fast
 
 *Updated after Phase 1 completion*
+| Phase 02-mcp-layer P04 | 1min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,8 @@ Recent decisions affecting current work:
 - Zod pinned to `^3.25.x` — v4 silently breaks MCP tool schemas
 - `@hono/mcp` v0.2.3 `StreamableHTTPTransport`, stateless mode — SSE deprecated March 2025
 - `type: module` + NodeNext resolution — ESM-native, matches Node 24 behavior
+- [Phase 02-mcp-layer]: Test category '__mcp_smoke_test__' isolates seed data from real word bank
+- [Phase 02-mcp-layer]: cleanup() in finally block ensures test rows removed even on failure
 
 ### Pending Todos
 
@@ -79,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T15:10:00.000Z
-Stopped at: Session resumed — Phase 01 confirmed complete, advancing to Phase 02 MCP Layer
+Last session: 2026-03-28T20:51:53.193Z
+Stopped at: Checkpoint: Task 2 of 02-04 — awaiting human verification of MCP smoke test
 Resume file: None
